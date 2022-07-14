@@ -10,8 +10,9 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
 } from "reactstrap";
+import CartWidget from "./CartWidget";
 
 function NavBar() {
   return (
@@ -42,6 +43,7 @@ function NavBar() {
             </UncontrolledDropdown>
           </Nav>
         </Collapse>
+        <CartWidget />
       </Navbar>
     </div>
   );
