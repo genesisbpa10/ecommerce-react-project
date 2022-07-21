@@ -1,46 +1,71 @@
-import React from "react";
-import "./ItemCount.css"
-import { Button, CardBody,Card, CardTitle, CardText,CardSubtitle } from "reactstrap";
-import { useState } from "react";
-const ItemCount = () => {
-  const [count, setCount] = useState(0);
-  const onAdd = () => {
-    setCount(count + 1);
+import React, { useState } from "react";
+import "./ItemCount.css";
+import { Button, Card, CardHeader } from "reactstrap";
+
+const ItemCount = ({ stock, initial, onAdd, onErase }) => {
+  const [count, setCount] = useState(initial);
+
+  const add = () => {
+    if (count < stock) {
+      setCount(count + 1);
+    } else {
+      alert("No hay más stock de este producto");
+    }
   };
-  const onSubstract = () => {
-    setCount(count - 1);
+  const substract = () => {
+    if (count > initial) {
+      setCount(count - 1);
+    }
   };
   return (
     <Card
-    style={{
-      width: '18rem'
-    }}
-  >
-    <img
-      alt="Card image"
-      src="https://picsum.photos/300/200"
-    />
-    <CardBody>
-      <CardTitle tag="h5">
-        Card title
-      </CardTitle>
-      <CardSubtitle
-        className="mb-2 text-muted"
-        tag="h6"
-      >
-        {count}
-      </CardSubtitle>
-      <CardText>
-        Some quick example text to build on the card title and make up the bulk of the card's content.
-      </CardText>
-      <Button onClick={onSubstract}>
-        Add
+      className="mx-auto py-3"
+      color="dark"
+      inverse
+      style={{
+        width: "18rem",
+      }}
+    >
+      <CardHeader style={{ textAlign: "center" }}>
+        <Button
+          onClick={substract}
+          className="mx-3 py-2 number"
+          style={{
+            width: 50,
+            backgroundColor: "white",
+            color: "black",
+            borderRadius: "18px",
+            textAlign: "center",
+            fontSize: "24px",
+            cursor: "pointer",
+          }}
+        >
+          -
+        </Button>
+        <>{count}</>
+        <Button
+          onClick={add}
+          className="mx-3 py-2 number"
+          style={{
+            width: 50,
+            backgroundColor: "white",
+            color: "black",
+            borderRadius: "18px",
+            textAlign: "center",
+            fontSize: "24px",
+            cursor: "pointer",
+          }}
+        >
+          +
+        </Button>
+      </CardHeader>
+      <Button className="m-2" onClick={() => onAdd(count)}>
+        Agregar{" "}
       </Button>
-      <Button onClick={onAdd}>
-        Substract
+      <Button outline className="m-2" onClick={onErase}>
+        Eliminar
       </Button>
-    </CardBody>
-  </Card>
+    </Card>
   );
 };
 

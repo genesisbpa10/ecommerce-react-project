@@ -4,13 +4,10 @@ import { IconContext } from "react-icons";
 
 const CartWidget = () => {
   return (
-    <IconContext.Provider
-      value={{ color: "gray", size:"1.5em"}}
-    >
+    <IconContext.Provider value={{ color: "gray", size: "1.5em" }}>
       <BsCart className="mx-2" />
     </IconContext.Provider>
   );
 };
 
 export default CartWidget;
-
