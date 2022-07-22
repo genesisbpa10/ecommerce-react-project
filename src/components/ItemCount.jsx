@@ -17,6 +17,7 @@ const ItemCount = ({ stock, initial, onAdd, onErase }) => {
       setCount(count - 1);
     }
   };
+
   return (
     <Card
       className="mx-auto py-3"
