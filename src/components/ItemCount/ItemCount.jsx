@@ -19,20 +19,17 @@ const ItemCount = ({ initial, onAdd, onErase, stock }) => {
   };
 
   return (
-    <div
-      style={{
-        width: "35vh",
-      }}
-    >
-      <div className="m-auto" style={{ display: "block", width: "8vh" }}>
-        {count}
+    
+    <>
+        <div className="m-auto" style={{ display: "block", width: "8vh" }}>
+          {count}
       </div>
       <div style={{ display: "block" }}>
         <Button onClick={add}>+</Button>
         <Button
           style={{ display: "inline-block", textAlign: "end" }}
           onClick={substract}
-        >
+          >
           -
         </Button>
       </div>
@@ -42,7 +39,8 @@ const ItemCount = ({ initial, onAdd, onErase, stock }) => {
           Eliminar
         </Button>
       </div>
-    </div>
+    
+      </>
   );
 };
 
