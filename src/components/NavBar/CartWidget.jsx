@@ -5,9 +5,9 @@ import "./CartWidget.css";
 
 const CartWidget = () => {
   return (
-      <IconContext.Provider value={{ color: "gray", size: "1.5em" }}>
-        <BsCart className="mx-2 min_cart" />
-      </IconContext.Provider>
+    <IconContext.Provider value={{ color: "gray", size: "1.5em" }}>
+      <BsCart className="mx-2 min_cart" />
+    </IconContext.Provider>
   );
 };
 
