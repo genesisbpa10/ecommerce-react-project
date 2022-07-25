@@ -16,16 +16,25 @@ import CartWidget from "./CartWidget";
 
 function NavBar() {
   return (
-    <div>
-      <Navbar color="dark" expand="md" dark>
-        <NavbarBrand href="/" className="mx-2">
-          TZURE BAGS
+      <Navbar className="sticky-top fs-5 text py-0" color="black" expand="md" dark>
+        <NavbarBrand style={{maxHeight:"20vh"}} href="/" className="mx-3 ">
+         <img src="/img/logo.png" style={{borderRadius:"100px", maxHeight:"15vh" }}/>
+         
         </NavbarBrand>
         <NavbarToggler onClick={function noRefCheck() {}} />
         <Collapse navbar>
-          <Nav className="ms-auto" navbar>
+          <Nav className="m-auto" navbar>
             <NavItem className="mx-2">
               <NavLink href="#">Home</NavLink>
+            </NavItem>
+            <NavItem className="mx-2">
+              <NavLink href="#">FAQs</NavLink>
+            </NavItem>
+            <NavItem className="mx-2">
+              <NavLink href="#">Outlet</NavLink>
+            </NavItem>
+            <NavItem className="mx-2">
+              <NavLink href="#">About us</NavLink>
             </NavItem>
             <NavItem className="mx-2">
               <NavLink href="/">Contacto</NavLink>
@@ -37,7 +46,7 @@ function NavBar() {
               <DropdownMenu end>
                 <DropdownItem>Riñoneras</DropdownItem>
                 <DropdownItem>Portabarbijos</DropdownItem>
-                <DropdownItem />
+                <DropdownItem>Llaveros</DropdownItem>
                 <DropdownItem>Cintas</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
@@ -45,7 +54,6 @@ function NavBar() {
         </Collapse>
         <CartWidget />
       </Navbar>
-    </div>
   );
 }
 

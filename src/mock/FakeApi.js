@@ -7,7 +7,7 @@ const products = [
     stock: "3",
   },
   {
-    price:"3000",
+    price:"$3000",
     id: 1,
     url: "/img/sheine-grey.jpg",
     title: "Sheine Grey",
