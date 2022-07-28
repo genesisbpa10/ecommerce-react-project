@@ -24,20 +24,17 @@ const ItemCount = ({ initial, onAdd, onErase, stock }) => {
         <div className="m-auto" style={{ display: "block", width: "8vh" }}>
           {count}
       </div>
-      <div style={{ display: "block" }}>
-        <Button onClick={add}>+</Button>
-        <Button
+      <div  style={{textAlign:"center", display: "block" }}>
+        <Button className="m-1" onClick={add}>+</Button>
+        <Button className="m-1"
           style={{ display: "inline-block", textAlign: "end" }}
           onClick={substract}
           >
           -
         </Button>
       </div>
-      <div>
-        <Button onClick={() => onAdd(count)}>Agregar </Button>
-        <Button outline onClick={onErase}>
-          Eliminar
-        </Button>
+      <div style={{textAlign:"center"}}>
+        <Button  onClick={() => onAdd(count)}>Agregar </Button>
       </div>
     
       </>

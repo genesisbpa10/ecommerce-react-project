@@ -6,7 +6,6 @@ const ItemListContainer = ({ greetings }) => {
   const [productList, setProductList] = useState([]);
   const [mensaje, setMensaje] = useState("");
   const [loading, setLoading] = useState(true);
-  // console.log(data);
 
   useEffect(() => {
     data
@@ -14,7 +13,6 @@ const ItemListContainer = ({ greetings }) => {
       .catch(() => setMensaje("Hubo un error intente más tarde"))
       .finally(() => setLoading(false));
   }, []);
-  // console.log(productList);
 
   return (
     <div

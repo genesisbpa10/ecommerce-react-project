@@ -1,5 +1,4 @@
 import React from "react";
-import { CardGroup } from "reactstrap";
 import Item from "../Item/Item";
 
 const ItemList = ({ productList }) => {

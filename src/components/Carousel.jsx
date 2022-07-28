@@ -24,10 +24,8 @@ const Carousel = () => {
   ];
 
   return (
-    <div>
-      <UncontrolledCarousel
-      items={items}
-      />
+    <div style={{ height: "90" }}>
+      <UncontrolledCarousel items={items} />
     </div>
   );
 };
