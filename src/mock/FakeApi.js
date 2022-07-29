@@ -421,7 +421,10 @@ export const data = new Promise((resolve, reject) => {
   }, 2000);
 });
 
-export const getItem = (id) => {
+
+
+//Esta función debería recibir como parámetro de alguna manera el id de cada objeto para que después del setTimeOut resuelva productos[id] y así cambiar dependiendo del Id del producto.
+export const getItem = (productId) => {
   const task = new Promise((resolve) => {
     setTimeout(() => resolve(products[0]), 2000);
   });

@@ -4,8 +4,7 @@ import { getItem } from "../../mock/FakeApi";
 import {useParams} from "react-router-dom";
 
 const ItemDetailContainer = () => {
-  const {productId} = useParams()
-  const [itemId, setItemId] = useState();
+  const {productId} = useParams();
   const [loading, setLoading] = useState(true);
   const [productDetail, setProductDetail] = useState();
 
@@ -15,9 +14,9 @@ const ItemDetailContainer = () => {
       .then((product) => {
         setProductDetail(product);
       })
-      .catch((error) => console.log(error))
+      .catch((error) => console.error(error))
       .finally(() => setLoading(false));
-  }, [productId]);
+  }, [productId]);//no sé si debe quedar como array vacio o [productId] u otra cosa
 
   return (
     <>{loading ? "Cargando..." : <ItemDetail productDetail={productDetail} />}
