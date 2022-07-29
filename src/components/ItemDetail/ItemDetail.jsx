@@ -5,7 +5,7 @@ import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({ productDetail }) => {
   console.log({ productDetail });
-  const { name, id, principalImg, stock, price, description, weight, height } = productDetail;
+  const { name, id, principalImg, stock, price, description, width, height } = productDetail;
 
   const onAdd = (amount) => {
     console.log(`Acabas de agregar ${amount} productos (${name}) al carrito.`);
@@ -32,7 +32,7 @@ const ItemDetail = ({ productDetail }) => {
             {" "}
             <h2> {name} </h2>{" "}
           </CardTitle>
-          <CardText className="text-muted">{`${description}${weight} x ${height}`}</CardText>
+          <CardText className="text-muted">{`${description}${width} x ${height}`}</CardText>
           <CardText> {`Precio: ARS$ ${price}`} </CardText>
           <CardText> {`Stock: ${stock}`} </CardText>
           <ItemCount
