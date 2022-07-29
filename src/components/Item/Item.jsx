@@ -1,28 +1,49 @@
 import React from "react";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { Card, CardBody, CardImg, CardText, CardTitle } from "reactstrap";
 import ItemCount from "../ItemCount/ItemCount";
 
 const Item = ({ product }) => {
-  const { id, name, principalImg, stock, price, description } = product;
+  const {
+    id,
+    name,
+    principalImg,
+    stock,
+    height,
+    width,
+    price,
+    description,
+  } = product;
   const onAdd = (amount) => {
     console.log(`Acabas de agregar ${amount} productos (${name}) al carrito.`);
   };
 
   return (
-    <Card style={{ width: "35vh", height: "auto", margin: "2vh" }} key={id}>
+    <Card
+      className="p-1"
+      style={{ width: "44vh", height: "auto", margin: "2vh" }}
+      key={id}
+    >
       <CardImg
         style={{ width: "100%", height: "60%" }}
         src={principalImg}
         alt={name}
       />
-      <CardBody>
-        <CardTitle>
-          {" "}
-          <h2> {name} </h2>{" "}
+      <CardBody className="p-0 my-0 mx-1">
+        <CardTitle className="p-0 my-0 mx-1">
+          <h3> {name} </h3>
         </CardTitle>
-        <CardText className="text-muted">{description}</CardText>
-        <CardText> {`Precio: ARS$ ${price}`} </CardText>
-        <CardText> {`Stock: ${stock}`} </CardText>
+        <CardText className="my-0 mx-1 text-muted">
+          {`${description} ${height} x ${width}`}{" "}
+        </CardText>
+        <CardText className="my-0 mx-1"> {`Precio: ARS$ ${price}`} </CardText>
+        <CardText className="my-0 mx-1"> {`Stock: ${stock}`} </CardText>
+
+        <Link  to={`/item/${id}`}>
+          <Button >Ver más</Button>
+        </Link>
+
         <ItemCount
           className="card text-center"
           initial={1}

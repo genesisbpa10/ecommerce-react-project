@@ -14,8 +14,8 @@ const ItemDetail = ({ productDetail }) => {
     console.log("Esto va a eliminar los productos del carrito");
   };
   return (
-    <CardGroup
-      style={{ width: "120vh", height: "95vh", margin: "2vh" }}
+    <CardGroup className="p-auto"
+      style={{border:"silver solid 2px", borderRadius:"20px", width: "120vh", height: "80vh", margin: "2vh" }}
       key={id}
     >
       <Card style={{ border: "none" }}>

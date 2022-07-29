@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./ItemCount.css";
 import { Button } from "reactstrap";
 
-const ItemCount = ({ initial, onAdd, onErase, stock }) => {
+const ItemCount = ({ initial, onAdd, stock }) => {
   const [count, setCount] = useState(initial);
 
   const add = () => {
@@ -21,17 +21,12 @@ const ItemCount = ({ initial, onAdd, onErase, stock }) => {
   return (
     
     <>
-        <div className="m-auto" style={{ display: "block", width: "8vh" }}>
+        <div className="m-auto" >
           {count}
       </div>
       <div  style={{textAlign:"center", display: "block" }}>
-        <Button className="m-1" onClick={add}>+</Button>
-        <Button className="m-1"
-          style={{ display: "inline-block", textAlign: "end" }}
-          onClick={substract}
-          >
-          -
-        </Button>
+        <Button className=" p-auto m-3" style={{width:"3" ,borderRadius:"20px"}}  onClick={add}>+</Button>
+        <Button className=" p-auto m-3" style={{width:"3" ,borderRadius:"20px"}}  onClick={substract}>-</Button>
       </div>
       <div style={{textAlign:"center"}}>
         <Button  onClick={() => onAdd(count)}>Agregar </Button>
