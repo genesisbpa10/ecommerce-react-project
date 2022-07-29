@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
       })
       .catch((error) => console.error(error))
       .finally(() => setLoading(false));
-  }, [productId]);//no sé si debe quedar como array vacio o [productId] u otra cosa
+  }, [productId]);
 
   return (
     <>{loading ? "Cargando..." : <ItemDetail productDetail={productDetail} />}
