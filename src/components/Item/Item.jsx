@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Card, CardBody, CardImg, CardText, CardTitle } from "reactstrap";
 import ItemCount from "../ItemCount/ItemCount";
@@ -40,8 +39,8 @@ const Item = ({ product }) => {
         <CardText className="my-0 mx-1"> {`Precio: ARS$ ${price}`} </CardText>
         <CardText className="my-0 mx-1"> {`Stock: ${stock}`} </CardText>
 
-        <Link  to={`/item/${id}`}>
-          <Button >Ver más</Button>
+        <Link to={`/item/${id}`} className="btn btn-outline-dark px-3">
+          Ver más
         </Link>
 
         <ItemCount

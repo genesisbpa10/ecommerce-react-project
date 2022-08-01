@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { data } from "../../mock/FakeApi";
-import ItemList from "../ItemList/ItemList";
+
+import ItemList from "../ItemList/ItemList"
 
 const ItemListContainer = ({ greetings }) => {
   const [productList, setProductList] = useState([]);

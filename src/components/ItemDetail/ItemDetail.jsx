@@ -3,10 +3,8 @@ import { CardGroup } from "react-bootstrap";
 import { Card, CardImg, CardBody, CardTitle, CardText } from "reactstrap";
 import ItemCount from "../ItemCount/ItemCount";
 
-const ItemDetail = ({ productDetail }) => {
-  console.log({ productDetail });
-  const { name, id, principalImg, stock, price, description, width, height } = productDetail;
-
+const ItemDetail = ({productDetail}) => {
+  const {id, name, price, stock, width, height, description, principalImg} =productDetail;
   const onAdd = (amount) => {
     console.log(`Acabas de agregar ${amount} productos (${name}) al carrito.`);
   };

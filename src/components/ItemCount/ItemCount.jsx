@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./ItemCount.css";
 import { Button } from "reactstrap";
 
-const ItemCount = ({ initial, onAdd, stock }) => {
+const ItemCount = ({ initial, onAdd, stock, onErase }) => {
   const [count, setCount] = useState(initial);
 
   const add = () => {
@@ -19,20 +19,29 @@ const ItemCount = ({ initial, onAdd, stock }) => {
   };
 
   return (
-    
     <>
-        <div className="m-auto" >
-          {count}
+      <div className="m-auto">{count}</div>
+      <div style={{ textAlign: "center", display: "block" }}>
+        <Button
+          className=" p-auto m-3"
+          style={{ width: "3", borderRadius: "20px" }}
+          onClick={add}
+        >
+          +
+        </Button>
+        <Button
+          className=" p-auto m-3"
+          style={{ width: "3", borderRadius: "20px" }}
+          onClick={substract}
+        >
+          -
+        </Button>
       </div>
-      <div  style={{textAlign:"center", display: "block" }}>
-        <Button className=" p-auto m-3" style={{width:"3" ,borderRadius:"20px"}}  onClick={add}>+</Button>
-        <Button className=" p-auto m-3" style={{width:"3" ,borderRadius:"20px"}}  onClick={substract}>-</Button>
+      <div style={{ textAlign: "center" }}>
+        <Button onClick={() => onAdd(count)}>Agregar </Button>
+        <Button onClick={() => onErase(count)}>Eliminar </Button>
       </div>
-      <div style={{textAlign:"center"}}>
-        <Button  onClick={() => onAdd(count)}>Agregar </Button>
-      </div>
-    
-      </>
+    </>
   );
 };
 

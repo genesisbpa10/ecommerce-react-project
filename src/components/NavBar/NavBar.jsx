@@ -32,17 +32,17 @@ function NavBar() {
               <NavLink href="/contacto">Contacto</NavLink>
             </NavItem>
             <NavItem className="mx-2">
-              <NavLink href="/contacto">FAQs</NavLink>
+              <NavLink href="/faqs">FAQs</NavLink>
             </NavItem>
             <NavItem className="mx-2">
-              <NavLink href="/contacto">Us</NavLink>
+              <NavLink href="/about">About us</NavLink>
             </NavItem>
             <UncontrolledDropdown inNavbar nav className="mx-2">
               <DropdownToggle caret nav>
                 Categorías
               </DropdownToggle>
               <DropdownMenu end>
-                <DropdownItem href="/category/riñoneras">Riñoneras</DropdownItem>
+                <DropdownItem href="/category/:riñoneras">Riñoneras</DropdownItem>
                 <DropdownItem href="/category/:portabarbijos">Portabarbijos</DropdownItem>
                 <DropdownItem href="/category/:cintas" >Cintas</DropdownItem>
                 <DropdownItem href="/category/:llaveros" >Llaveros</DropdownItem>
