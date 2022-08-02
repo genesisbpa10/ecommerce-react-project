@@ -629,3 +629,9 @@ export const data = new Promise((resolve, reject) => {
     }
   }, 2000);
 });
+
+export const getProduct = new Promise(resolve => {
+  setTimeout(() => {
+      resolve(products);
+  }, 2000)
+});
