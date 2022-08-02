@@ -635,3 +635,4 @@ export const getProduct = new Promise(resolve => {
       resolve(products);
   }, 2000)
 });
+
