@@ -3,7 +3,7 @@ import { data } from "../../mock/FakeApi";
 
 import ItemList from "../ItemList/ItemList"
 
-const ItemListContainer = ({ greetings }) => {
+const ItemListContainer = () => {
   const [productList, setProductList] = useState([]);
   const [mensaje, setMensaje] = useState("");
   const [loading, setLoading] = useState(true);
@@ -30,7 +30,6 @@ const ItemListContainer = ({ greetings }) => {
         <p>Cargando...</p>
       ) : (
         <>
-          <h1>{greetings}</h1>
           <ItemList productList={productList} />
         </>
       )}
