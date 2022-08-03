@@ -12,7 +12,7 @@ Es un E-commerce desarrolado para la marca Tzure Bags, como proyecto final para 
 * Node.js
 
 ## Sobre la marca
-
+ <img  src="./public/img/favicon.ico" width="40vh"/>
 ![Imagen TZURE BAGS](./public/img/favicon.ico)
 
 Es un microemprendimiento de elaboración personalizada de riñoneras hechas a mano, cruelty free, creadas con material sustentable y amigable con el medio ambiente. 
