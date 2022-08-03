@@ -5,7 +5,8 @@ Es un E-commerce desarrolado para la marca Tzure Bags, como proyecto final para 
 ## Las tecnologías utilizadas en el desarrollo del proyecto son:
 * HTML5
 * CSS3
-* JavaScript en React.js
+* JavaScript 
+* React.js
 * Bootstrap 
 * Reactstrap
 * Node.js
@@ -13,7 +14,8 @@ Es un E-commerce desarrolado para la marca Tzure Bags, como proyecto final para 
 
 ## Sobre la marca
 
-! [Imagen TZURE BAGS](https://github.com/genesisbpa10/ecommerce-react-project/main/public/img/favicon.ico)
+! [Imagen TZURE BAGS](https://github.com/genesisbpa10/ecommerce-react-project/main/public/favicon.ico)
+
 Es un microemprendimiento de elaboración personalizada de riñoneras hechas a mano, cruelty free, creadas con material sustentable y amigable con el medio ambiente. 
 
 
