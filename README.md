@@ -1,7 +1,6 @@
-Proyecto final para el curso de React.Js Coder House- Julio- Agosto2022
+# E-Commerce TZURE BAGS
 
-El proyecto es un E-commerce desarrollado para la marca TZURE BAGS.
-
+Es un E-commerce desarrolado para la marca Tzure Bags, como proyecto final para el curso de React.Js de Coder House- Comisión: #34680 Julio- Septiembre 2022
 
 ## Las tecnologías utilizadas en el desarrollo del proyecto son:
 * HTML5
@@ -18,9 +17,9 @@ El proyecto es un E-commerce desarrollado para la marca TZURE BAGS.
 Es un microemprendimiento de elaboración personalizada de riñoneras hechas a mano, cruelty free, creadas con material sustentable y amigable con el medio ambiente. 
 
 
-Contacto:
-Creador: Génesis Pérez.
-Mail: genesisbetaly@gmail.com
+## Contacto:
+* Creador: Génesis Pérez.
+* Mail: genesisbetaly@gmail.com
 
 
 
