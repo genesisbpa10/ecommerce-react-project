@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { data } from "../../mock/FakeApi";
-
-import ItemList from "../ItemList/ItemList"
+import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = () => {
   const [productList, setProductList] = useState([]);
-  const [mensaje, setMensaje] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     data
       .then((resp) => setProductList(resp))
-      .catch(() => setMensaje("Hubo un error intente más tarde"))
+      .catch((error) => console.error(error))
       .finally(() => setLoading(false));
   }, []);
 
@@ -25,7 +23,7 @@ const ItemListContainer = () => {
         flexWrap: "wrap",
       }}
     >
-      {mensaje && <p>{mensaje}</p>}
+      
       {loading ? (
         <p>Cargando...</p>
       ) : (

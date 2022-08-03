@@ -12,7 +12,7 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "reactstrap";
-import CartWidget from "./CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
 
 
 function NavBar() {
