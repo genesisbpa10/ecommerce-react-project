@@ -13,7 +13,7 @@ Node.js
 
 
 Sobre la marca
-https://github.com/genesisbpa10/ecommerce-react-project/main/public/img/favicon.ico
+!https://github.com/genesisbpa10/ecommerce-react-project/main/public/img/favicon.ico
 Es un microemprendimiento de elaboración personalizada de riñoneras hechas a mano, cruelty free, creadas con material sustentable y amigable con el medio ambiente. 
 
 
