@@ -1,35 +1,24 @@
 import ItemDetail from "../ItemDetail/ItemDetail";
 import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
-import {products} from "../../mock/FakeApi";
+import {getProduct} from "../../mock/FakeApi";
 
 export const ItemDetailContainer = () => {
 
     const [productDetail, setProductDetail] = useState({});
     const [loading, setLoading] = useState(true)    
-    const {id} = useParams();
+    const { id } = useParams();
 
     useEffect(() => {
-        const getProduct = new Promise(resolve => {
-            setTimeout(() => {
-                resolve(products);
+        getProduct(id)
+        .then((resp) => {
+                setProductDetail(resp)
                 setLoading(false)
-            }, 2000)
-        });
-        getProduct.then(response => setProductDetail(response.find(producto => producto.id === (id))));
+        })
+        .catch((e) => console.log(e))
     },[id]);
 
-    // useEffect(() => {
-    //     const getProduct = new Promise(resolve => {
-    //         setTimeout(() => {
-    //             resolve(products);
-    //         }, 2000)
-    //     });
-    //     getProduct.then(response => setProductDetail(response.find(producto => producto.categoryId === (categoryId))));
-    // },[categoryId]);
-
     return (
-
         <div
         className="itemList"
         style={{

@@ -1,19 +1,19 @@
 export const products = [
   {
-    id:"0-1",
+    id: "0-1",
     sku: "",
     name: "Sheine Red Metal ",
     price: "5000",
     description: "Riñonera Sheine ideal para toda ocasión. Sus medidas son: ",
     width: "25cm",
     height: "15cm",
-    principalImg:"/img/riñoneras/SH-red-metal.png",
+    principalImg: "/img/riñoneras/SH-red-metal.png",
     secondaryImg: "/SH-red-metal-secondary.png",
     thirdImg: "/SH-red-metal.png",
     category: "riñoneras",
     stock: "5",
     thumbnail: "",
-    subCategory:"sheine",
+    subCategory: "sheine",
     type: "fija", //Fija o intercambiable.
   },
   {
@@ -24,13 +24,13 @@ export const products = [
     description: "Riñonera Sheine",
     width: "25cm",
     height: "15cm",
-    principalImg:"/img/riñoneras/SH-croco-bordo.png",
+    principalImg: "/img/riñoneras/SH-croco-bordo.png",
     secondaryImg: "/img/riñoneras/SH-croco-bordo-secondary.png",
     thirdImg: "/img/riñoneras/SH-croco-bordo-.png",
     category: "riñoneras",
     stock: "10",
     thumbnail: "",
-    subCategory:"sheine",
+    subCategory: "sheine",
     type: "fija", //Fija o intercambiable.
   },
   {
@@ -41,13 +41,13 @@ export const products = [
     description: "Riñonera Sheine",
     width: "25cm",
     height: "15cm",
-    principalImg:"/img/riñoneras/SH-croco-bordo-yellow.png",
+    principalImg: "/img/riñoneras/SH-croco-bordo-yellow.png",
     secondaryImg: "/img/riñoneras/SH-croco-bordo-yellow-secondary.png",
     thirdImg: "/img/riñoneras/SH-croco-bordo-yellow.png",
     category: "riñoneras",
     stock: "10",
     thumbnail: "",
-    subCategory:"sheine",
+    subCategory: "sheine",
     type: "fija", //Fija o intercambiable.
   },
   {
@@ -58,13 +58,13 @@ export const products = [
     description: "Riñonera Sheine",
     width: "25cm",
     height: "15cm",
-    principalImg:"/img/riñoneras/SH-gold.png",
+    principalImg: "/img/riñoneras/SH-gold.png",
     secondaryImg: "/SH-gold-secondary.png",
     thirdImg: "/SH-gold.png",
     category: "riñoneras",
     stock: "8",
     thumbnail: "",
-    subCategory:"sheine",
+    subCategory: "sheine",
     type: "fija", //Fija o intercambiable.
   },
   {
@@ -75,14 +75,14 @@ export const products = [
     description: "Riñonera Sheine",
     width: "25cm",
     height: "15cm",
-    principalImg:"/img/riñoneras/SH-silver-text.png",
+    principalImg: "/img/riñoneras/SH-silver-text.png",
     secondaryImg: "/SH-silver-text-secondary.png",
     thirdImg: "/SH-silver-text.png",
     fourthImg: "/SH-peltre-left.png",
     category: "riñoneras",
     stock: "15",
     thumbnail: "",
-    subCategory:"sheine",
+    subCategory: "sheine",
     type: "fija", //Fija o intercambiable.
   },
   {
@@ -93,13 +93,13 @@ export const products = [
     description: "Riñonera Sheine",
     width: "25cm",
     height: "15cm",
-    principalImg:"/img/riñoneras/SH-croco-white.png",
+    principalImg: "/img/riñoneras/SH-croco-white.png",
     secondaryImg: "/SH-croco-white-secondary.png",
     thirdImg: "/SH-croco-white.png",
     category: "riñoneras",
     stock: "5",
     thumbnail: "",
-    subCategory:"sheine",
+    subCategory: "sheine",
     type: "fija", //Fija o intercambiable.
   },
   {
@@ -110,13 +110,13 @@ export const products = [
     description: "Riñonera Sheine Plus",
     width: "35cm",
     height: "15cm",
-    principalImg:"/img/riñoneras/SH-charol-rose.png",
+    principalImg: "/img/riñoneras/SH-charol-rose.png",
     secondaryImg: "/img/riñoneras/SH-charol-rose-secondary.png",
     thirdImg: "/img/riñoneras/SH-charol-rose-.png",
     category: "riñoneras",
     stock: "5",
     thumbnail: "",
-    subCategory:"sheine-plus",
+    subCategory: "sheine-plus",
     type: "fija", //Fija o intercambiable.
   },
   {
@@ -127,13 +127,13 @@ export const products = [
     description: "Riñonera Sheine",
     width: "25cm",
     height: "15cm",
-    principalImg:"/img/riñoneras/SH-silver.png",
+    principalImg: "/img/riñoneras/SH-silver.png",
     secondaryImg: "/img/riñoneras/SH-silver-secondary.png",
     thirdImg: "/img/riñoneras/SH-silver-third.png",
     category: "riñoneras",
     stock: "7",
     thumbnail: "",
-    subCategory:"sheine",
+    subCategory: "sheine",
     type: "fija", //Fija o intercambiable.
   },
   {
@@ -144,13 +144,13 @@ export const products = [
     description: "Riñonera Sheine",
     width: "25cm",
     height: "15cm",
-    principalImg:"/img/riñoneras/SH-peltre.png",
+    principalImg: "/img/riñoneras/SH-peltre.png",
     secondaryImg: "/img/riñoneras/SH-peltre-secondary.png",
     thirdImg: "/img/riñoneras/SH-peltre-third.png",
     category: "riñoneras",
     stock: "20",
     thumbnail: "",
-    subCategory:"sheine",
+    subCategory: "sheine",
     type: "fija", //Fija o intercambiable.
   },
   {
@@ -161,13 +161,13 @@ export const products = [
     description: "Riñonera Sheine",
     width: "25cm",
     height: "15cm",
-    principalImg:"/img/riñoneras/SH-silver-text-mate.png",
+    principalImg: "/img/riñoneras/SH-silver-text-mate.png",
     secondaryImg: "/img/riñoneras/SH-silver-text-mate-secondary.png",
     thirdImg: "/img/riñoneras/SH-silver-text-mate-third.png",
     category: "riñoneras",
     stock: "5",
     thumbnail: "",
-    subCategory:"sheine",
+    subCategory: "sheine",
     type: "fija", //Fija o intercambiable.
   },
   {
@@ -178,13 +178,13 @@ export const products = [
     description: "Riñonera Sheine",
     width: "25cm",
     height: "15cm",
-    principalImg:"/img/riñoneras/SH-red.png",
+    principalImg: "/img/riñoneras/SH-red.png",
     secondaryImg: "/img/riñoneras/SH-red-secondary.png",
     thirdImg: "/img/riñoneras/SH-red-third.png",
     category: "riñoneras",
     stock: "5",
     thumbnail: "",
-    subCategory:"sheine",
+    subCategory: "sheine",
     type: "fija", //Fija o intercambiable.
   },
   // Cintas
@@ -196,13 +196,13 @@ export const products = [
     description: "Cinta para escoger ",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-black.png",
+    principalImg: "/img/cintas/CI-black.png",
     secondaryImg: "/img/cintas/CI-black.png",
     thirdImg: "/img/cintas/CI-black.png",
     category: "cintas",
     stock: "10",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -213,13 +213,13 @@ export const products = [
     description: "Cinta",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-rainbow-pastel.png",
+    principalImg: "/img/cintas/CI-rainbow-pastel.png",
     secondaryImg: "/img/cintas/CI-rainbow-pastel.png",
     thirdImg: "/img/cintas/CI-rainbow-pastel.png",
     category: "cintas",
     stock: "10",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -230,13 +230,13 @@ export const products = [
     description: "Cinta",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-militar-long.png",
+    principalImg: "/img/cintas/CI-militar-long.png",
     secondaryImg: "/img/cintas/CI-militar-long.png",
     thirdImg: "/img/cintas/CI-militar-long.png",
     category: "cintas",
     stock: "20",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -247,30 +247,30 @@ export const products = [
     description: "Cinta",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-militar-dark.png",
+    principalImg: "/img/cintas/CI-militar-dark.png",
     secondaryImg: "/img/cintas/CI-militar-dark.png",
     thirdImg: "/img/cintas/CI-militar-dark.png",
     category: "cintas",
     stock: "10",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
     id: "1-5",
     sku: "",
-    name:"Militar Bright",
+    name: "Militar Bright",
     price: "400",
     description: "Cinta",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-militar-bright.png",
+    principalImg: "/img/cintas/CI-militar-bright.png",
     secondaryImg: "/img/cintas/CI-militar-bright.png",
     thirdImg: "/img/cintas/CI-militar-bright.png",
     category: "cintas",
     stock: "10",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -281,13 +281,13 @@ export const products = [
     description: "Cinta",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-mariposas.png",
+    principalImg: "/img/cintas/CI-mariposas.png",
     secondaryImg: "/img/cintas/CI-mariposas.png",
     thirdImg: "/img/cintas/CI-mariposas.png",
     category: "cintas",
     stock: "10",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -298,13 +298,13 @@ export const products = [
     description: "Cinta",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-love-see-you.png",
+    principalImg: "/img/cintas/CI-love-see-you.png",
     secondaryImg: "/img/cintas/CI-love-see-you.png",
     thirdImg: "/img/cintas/CI-love-see-you.png",
     category: "cintas",
     stock: "600",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -315,13 +315,13 @@ export const products = [
     description: "Cinta",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-eyes.png",
+    principalImg: "/img/cintas/CI-eyes.png",
     secondaryImg: "/img/cintas/CI-eyes.png",
     thirdImg: "/img/cintas/CI-eyes.png",
     category: "cintas",
     stock: "0",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -332,13 +332,13 @@ export const products = [
     description: "Cinta",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-gucci.png",
+    principalImg: "/img/cintas/CI-gucci.png",
     secondaryImg: "/img/cintas/CI-gucci.png",
     thirdImg: "/img/cintas/CI-gucci.png",
     category: "cintas",
     stock: "10",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -349,13 +349,13 @@ export const products = [
     description: "Cinta",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-cow.png",
+    principalImg: "/img/cintas/CI-cow.png",
     secondaryImg: "//img/cintas/CI-cow.png",
     thirdImg: "/img/cintas/CI-cow.png",
     category: "cintas",
     stock: "10",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -366,13 +366,13 @@ export const products = [
     description: "Cinta",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-chains.png",
+    principalImg: "/img/cintas/CI-chains.png",
     secondaryImg: "/img/cintas/CI-chains.png",
     thirdImg: "/img/cintas/CI-chains.png",
     category: "cintas",
     stock: "11",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -383,13 +383,13 @@ export const products = [
     description: "Cinta",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-burberry.png",
+    principalImg: "/img/cintas/CI-burberry.png",
     secondaryImg: "/img/cintas/CI-burberry.png",
     thirdImg: "/img/cintas/CI-burberry.png",
     category: "cintas",
     stock: "40",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -400,13 +400,13 @@ export const products = [
     description: "Cinta",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-army.png",
+    principalImg: "/img/cintas/CI-army.png",
     secondaryImg: "/img/cintas/CI-army.png",
     thirdImg: "/img/cintas/CI-army.png",
     category: "cintas",
     stock: "100",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
 
@@ -416,16 +416,17 @@ export const products = [
     sku: "",
     name: "Army",
     price: "400",
-    description: "Portabarbijos especialmente diseñados para las necesidades de todos. Práctico y con mucho estilo.",
+    description:
+      "Portabarbijos especialmente diseñados para las necesidades de todos. Práctico y con mucho estilo.",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-army.png",
+    principalImg: "/img/cintas/CI-army.png",
     secondaryImg: "/img/cintas/CI-army.png",
     thirdImg: "/img/cintas/CI-army.png",
     category: "portabarbijos",
     stock: "90",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -433,16 +434,17 @@ export const products = [
     sku: "",
     name: " Palta",
     price: "5000",
-    description: "Portabarbijos especialmente diseñados para las necesidades de todos. Práctico y con mucho estilo.",
+    description:
+      "Portabarbijos especialmente diseñados para las necesidades de todos. Práctico y con mucho estilo.",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-army.png",
+    principalImg: "/img/cintas/CI-army.png",
     secondaryImg: "/img/cintas/CI-army.png",
     thirdImg: "/img/cintas/CI-army.png",
     category: "portabarbijos",
     stock: "100",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -450,16 +452,17 @@ export const products = [
     sku: "",
     name: "Black ",
     price: "500",
-    description: "Portabarbijos especialmente diseñados para las necesidades de todos. Práctico y con mucho estilo.",
+    description:
+      "Portabarbijos especialmente diseñados para las necesidades de todos. Práctico y con mucho estilo.",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-army.png",
+    principalImg: "/img/cintas/CI-army.png",
     secondaryImg: "/img/cintas/CI-army.png",
     thirdImg: "/img/cintas/CI-army.png",
     category: "portabarbijos",
     stock: "40",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -467,16 +470,17 @@ export const products = [
     sku: "",
     name: "Gucci ",
     price: "3000",
-    description: "Portabarbijos especialmente diseñados para las necesidades de todos. Práctico y con mucho estilo.",
+    description:
+      "Portabarbijos especialmente diseñados para las necesidades de todos. Práctico y con mucho estilo.",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-army.png",
+    principalImg: "/img/cintas/CI-army.png",
     secondaryImg: "/img/cintas/CI-army.png",
     thirdImg: "/img/cintas/CI-army.png",
     category: "portabarbijos",
     stock: "0",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -484,16 +488,17 @@ export const products = [
     sku: "",
     name: "Militar Light ",
     price: "100",
-    description: "Portabarbijos especialmente diseñados para las necesidades de todos. Práctico y con mucho estilo.",
+    description:
+      "Portabarbijos especialmente diseñados para las necesidades de todos. Práctico y con mucho estilo.",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-army.png",
+    principalImg: "/img/cintas/CI-army.png",
     secondaryImg: "/img/cintas/CI-army.png",
     thirdImg: "/img/cintas/CI-army.png",
     category: "portabarbijos",
     stock: "20",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -501,16 +506,17 @@ export const products = [
     sku: "",
     name: "Rainbow Pastel ",
     price: "500",
-    description: "Portabarbijos especialmente diseñados para las necesidades de todos. Práctico y con mucho estilo.",
+    description:
+      "Portabarbijos especialmente diseñados para las necesidades de todos. Práctico y con mucho estilo.",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-army.png",
+    principalImg: "/img/cintas/CI-army.png",
     secondaryImg: "/img/cintas/CI-army.png",
     thirdImg: "/img/cintas/CI-army.png",
     category: "portabarbijos",
     stock: "100",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
 
@@ -523,13 +529,13 @@ export const products = [
     description: "Llaveros prácticos, cómodos y con todo el estilo.",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-army.png",
+    principalImg: "/img/cintas/CI-army.png",
     secondaryImg: "/img/cintas/CI-army.png",
     thirdImg: "/img/cintas/CI-army.png",
     category: "llaveros",
     stock: "10",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -540,13 +546,13 @@ export const products = [
     description: "Llaveros prácticos, cómodos y con todo el estilo.",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-army.png",
+    principalImg: "/img/cintas/CI-army.png",
     secondaryImg: "/img/cintas/CI-army.png",
     thirdImg: "/img/cintas/CI-army.png",
     category: "llaveros",
     stock: "60",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -557,13 +563,13 @@ export const products = [
     description: "Llaveros prácticos, cómodos y con todo el estilo.",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-army.png",
+    principalImg: "/img/cintas/CI-army.png",
     secondaryImg: "/img/cintas/CI-army.png",
     thirdImg: "/img/cintas/CI-army.png",
     category: "llaveros",
     stock: "14",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -574,13 +580,13 @@ export const products = [
     description: "Llaveros prácticos, cómodos y con todo el estilo.",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-army.png",
+    principalImg: "/img/cintas/CI-army.png",
     secondaryImg: "/img/cintas/CI-army.png",
     thirdImg: "/img/cintas/CI-army.png",
     category: "llaveros",
     stock: "90",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -591,13 +597,13 @@ export const products = [
     description: "Llaveros prácticos, cómodos y con todo el estilo.",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-army.png",
+    principalImg: "/img/cintas/CI-army.png",
     secondaryImg: "/img/cintas/CI-army.png",
     thirdImg: "/img/cintas/CI-army.png",
     category: "llaveros",
     stock: "5",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
   {
@@ -608,13 +614,13 @@ export const products = [
     description: "Llaveros prácticos, cómodos y con todo el estilo.",
     width: "20cm",
     height: "5cm",
-    principalImg:"/img/cintas/CI-army.png",
+    principalImg: "/img/cintas/CI-army.png",
     secondaryImg: "/img/cintas/CI-army.png",
     thirdImg: "/img/cintas/CI-army.png",
     category: "llaveros",
     stock: "0",
     thumbnail: "",
-    subCategory:"clasica",
+    subCategory: "clasica",
     // type: "fija", //Fija o intercambiable.
   },
 ];
@@ -629,3 +635,13 @@ export const data = new Promise((resolve, reject) => {
     }
   }, 2000);
 });
+
+export const getProduct = (id) =>
+  new Promise((resolve) => {
+    let condition = true;
+    setTimeout(() => {
+      if (condition) {
+        resolve(products.find((product) => product.id === id));
+      }
+    }, 2000);
+  });
