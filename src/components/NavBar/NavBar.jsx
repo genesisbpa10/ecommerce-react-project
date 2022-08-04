@@ -9,9 +9,8 @@ function NavBar() {
   return (
    <>
      <Navbar
-      className="sticky-top "
-      style={{ height: "14vh", display: "flex" }}
-      color="dark"
+      className="sticky-top  bg-light"
+      style={{ height: "14vh", display: "flex"}}
       expand="md"
       dark="true"
       >

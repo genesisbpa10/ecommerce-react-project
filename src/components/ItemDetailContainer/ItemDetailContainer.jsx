@@ -7,13 +7,18 @@ export const ItemDetailContainer = () => {
 
     const [productDetail, setProductDetail] = useState({});
     const [loading, setLoading] = useState(true)    
-    const { id } = useParams();
+    const {id} = useParams();
 
     useEffect(() => {
         getProduct(id)
         .then((resp) => {
+            if(id){
                 setProductDetail(resp)
+                console.log(resp)
                 setLoading(false)
+            }else{
+                console.log("error")
+            }
         })
         .catch((e) => console.log(e))
     },[id]);
@@ -28,8 +33,9 @@ export const ItemDetailContainer = () => {
           flexWrap: "wrap",
         }}>
         {loading ? (<p>Cargando...</p>) : (
+
         <ItemDetail productDetail={productDetail}/>
-        )}
+        )} 
         </div>
     );
 }

@@ -641,7 +641,7 @@ export const getProduct = (id) =>
     let condition = true;
     setTimeout(() => {
       if (condition) {
-        resolve(products.find((product) => product.id === id));
+        resolve(products.find((product) => product.id === (id)));
       }
     }, 2000);
   });
