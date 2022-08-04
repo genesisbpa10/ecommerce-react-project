@@ -15,12 +15,12 @@ export const ItemDetailContainer = () => {
             if(id){
                 setProductDetail(resp)
                 console.log(resp)
-                setLoading(false)
             }else{
                 console.log("error")
             }
         })
         .catch((e) => console.log(e))
+        setLoading(false)
     },[id]);
 
     return (
