@@ -4,9 +4,10 @@ import { Card, CardBody, CardImg, CardText, CardTitle } from "reactstrap";
 import ItemCount from "../ItemCount/ItemCount";
 
 const Item = ({product}) => {
- const{ id, name, principalImg, stock, price, category, description, height, width} = product;
+ const{ id, name, principalImg, stock, price, description, height, width} = product;
   const onAdd = (amount) => {
-    console.log(`Acabas de agregar ${amount} productos (${name}) al carrito.`);
+    console.log(`Acabas de agregar ${amount} productos (${name}) al carrito.`)
+    
   };
 
   return (

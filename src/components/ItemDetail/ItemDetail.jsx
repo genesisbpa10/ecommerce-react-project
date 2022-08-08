@@ -1,23 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom"
 import { CardGroup } from "react-bootstrap";
-import { 
-  Card, 
-  CardImg, 
-  CardBody, 
-  CardTitle, 
-  CardText } from "reactstrap";
+import {
+  Card,
+  CardImg,
+  CardBody,
+  CardTitle,
+  CardText,
+  Button,
+  CardFooter
+} from "reactstrap";
 import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = (props) => {
-//  const {id, principalImg, name, description, height, width, price, stock} = productDetail;
+  const item = props.productDetail
+  const navigate = useNavigate();
+  const [count, setCount] = useState(item.initial);
+  const [goToCart, setGoToCart] = useState(false);
 
-  const onAdd = (amount) => {
-    console.log(`Acabas de agregar ${amount} productos al carrito.`);
+  const onAdd = (quantityToAdd) => {
+    console.log(`Acabas de agregar ${quantityToAdd} productos al carrito.`);
+    setCount(quantityToAdd)
+    console.log(count)
+    //Navegar al "/cart"
+    navigate("/cart")
+    setGoToCart(true)
   };
   const onErase = () => {
     console.log("Esto va a eliminar los productos del carrito");
   };
-const item = props.productDetail
   return (
     <CardGroup
       className="p-auto"
@@ -47,13 +58,13 @@ const item = props.productDetail
           <CardText className="text-muted">{`${item.description}${item.width} x ${item.height}`}</CardText>
           <CardText> {`Precio: ARS$ ${item.price}`} </CardText>
           <CardText> {`Stock: ${item.stock}`} </CardText>
-          <ItemCount
-            className="card text-center"
-            initial={1}
-            onAdd={onAdd}
-            onErase={onErase}
-            stock={item.stock}
-          />
+              <ItemCount
+                  className="card text-center"
+                  initial={1}
+                  onAdd={onAdd}
+                  onErase={onErase}
+                  stock={item.stock}
+              /> 
         </CardBody>
       </Card>
     </CardGroup>

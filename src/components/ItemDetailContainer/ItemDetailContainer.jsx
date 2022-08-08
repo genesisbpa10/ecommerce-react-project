@@ -14,7 +14,7 @@ export const ItemDetailContainer = () => {
         .then((resp) => {
             if(id){
                 setProductDetail(resp)
-                console.log(resp)
+                //console.log(resp)
             }else{
                 console.log("error")
             }
@@ -32,7 +32,7 @@ export const ItemDetailContainer = () => {
           alignItems: "center",
           flexWrap: "wrap",
         }}>
-        {loading ? (<p>Cargando...</p>) : (
+        {loading ? <p>Cargando...</p> : (
 
         <ItemDetail productDetail={productDetail}/>
         )} 
