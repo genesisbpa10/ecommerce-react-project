@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./ItemCount.css";
 import { Button } from "reactstrap";
 const ItemCount = ({ initial, onAdd, stock, onErase }) => {
@@ -36,8 +36,7 @@ const ItemCount = ({ initial, onAdd, stock, onErase }) => {
           -
         </Button>
       </div>
-      <div style={{ textAlign: "center" }}>
-       
+      <div style={{ textAlign: "center" }}>       
          <Button onClick={() => onAdd(count)}>Agregar </Button>
         <Button onClick={() => onErase(count)}>Eliminar </Button>
       </div>

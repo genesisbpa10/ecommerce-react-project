@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { CardGroup } from "react-bootstrap";
 import {
   Card,
   CardImg,
   CardBody,
   CardTitle,
-  CardText,
-  Button,
-  CardFooter
+  CardText
 } from "reactstrap";
 import ItemCount from "../ItemCount/ItemCount";
 
@@ -16,15 +14,14 @@ const ItemDetail = (props) => {
   const item = props.productDetail
   const navigate = useNavigate();
   const [count, setCount] = useState(item.initial);
-  const [goToCart, setGoToCart] = useState(false);
+
 
   const onAdd = (quantityToAdd) => {
     console.log(`Acabas de agregar ${quantityToAdd} productos al carrito.`);
     setCount(quantityToAdd)
     console.log(count)
-    //Navegar al "/cart"
     navigate("/cart")
-    setGoToCart(true)
+    
   };
   const onErase = () => {
     console.log("Esto va a eliminar los productos del carrito");
