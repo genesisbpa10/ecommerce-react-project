@@ -6,14 +6,14 @@ import ItemCount from "../ItemCount/ItemCount";
 import { CartContext } from "../../context/CartContext";
 
 const ItemDetail = (props) => {
-  const {addToCart} = useContext(CartContext)
+  const { addToCart } = useContext(CartContext);
 
   const item = props.productDetail;
   const navigate = useNavigate();
   const [count, setCount] = useState(item.initial);
 
   const onAdd = (quantityToAdd) => {
-    addToCart(item, quantityToAdd)
+    addToCart(item, quantityToAdd);
     console.log(`Acabas de agregar ${quantityToAdd} productos al carrito.`);
     setCount(quantityToAdd);
     console.log(count);
