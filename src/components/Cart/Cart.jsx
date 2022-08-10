@@ -1,15 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-const Cart = () => {
-  return (
-    <>
-      <h2>Tu carrito está vacío</h2>
+import React, { useContext } from "react";
+import CartContext from "../../context/CartContext";
 
-      <Link to="/" className="btn btn-outline-dark px-3">
-        Volver
-      </Link>
-    </>
-  );
+const Cart = () => {
+
+  return <h1>Cart</h1>;
 };
 
 export default Cart;

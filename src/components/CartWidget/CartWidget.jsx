@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BsCart } from "react-icons/bs";
-import { IconContext } from "react-icons";
 import "./CartWidget.css";
+import { CartContext } from "../../context/CartContext";
 
 const CartWidget = () => {
+  const { cart } = useContext(CartContext);
+
   return (
-    <IconContext.Provider value={{ color: "gray", size: "1.5em" }}>
-      <BsCart className="mx-2 min_cart" />
-    </IconContext.Provider>
+    <>
+      <BsCart className="mx-2 min_cart" /> <span> {cart.length} </span>
+    </>
   );
 };
 

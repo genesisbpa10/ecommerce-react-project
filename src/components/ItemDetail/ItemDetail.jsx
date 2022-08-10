@@ -1,28 +1,29 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"
+import React, { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { CardGroup } from "react-bootstrap";
-import {
-  Card,
-  CardImg,
-  CardBody,
-  CardTitle,
-  CardText
-} from "reactstrap";
+import { Card, CardImg, CardBody, CardTitle, CardText } from "reactstrap";
 import ItemCount from "../ItemCount/ItemCount";
+import { CartContext } from "../../context/CartContext";
 
 const ItemDetail = (props) => {
-  const item = props.productDetail
+  const {addToCart} = useContext(CartContext)
+
+  const item = props.productDetail;
   const navigate = useNavigate();
   const [count, setCount] = useState(item.initial);
 
-
   const onAdd = (quantityToAdd) => {
+    addToCart(item, quantityToAdd)
     console.log(`Acabas de agregar ${quantityToAdd} productos al carrito.`);
-    setCount(quantityToAdd)
-    console.log(count)
-    navigate("/cart")
-    
+    setCount(quantityToAdd);
+    console.log(count);
+    navigate("/cart");
   };
+
+  useEffect(() => {
+    console.log(count);
+  }, [count]);
+
   const onErase = () => {
     console.log("Esto va a eliminar los productos del carrito");
   };
@@ -55,13 +56,13 @@ const ItemDetail = (props) => {
           <CardText className="text-muted">{`${item.description}${item.width} x ${item.height}`}</CardText>
           <CardText> {`Precio: ARS$ ${item.price}`} </CardText>
           <CardText> {`Stock: ${item.stock}`} </CardText>
-              <ItemCount
-                  className="card text-center"
-                  initial={1}
-                  onAdd={onAdd}
-                  onErase={onErase}
-                  stock={item.stock}
-              /> 
+          <ItemCount
+            className="card text-center"
+            initial={1}
+            onAdd={onAdd}
+            onErase={onErase}
+            stock={item.stock}
+          />
         </CardBody>
       </Card>
     </CardGroup>
