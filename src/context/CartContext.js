@@ -26,11 +26,6 @@ export default function CartProvider({ children }) {
     setCart([]);
   };
 
-  // const cantInCart = cart.reduce(
-  //   (previous, item) => previous += item.quantity,
-  //   0
-  // );
-
   return (
     <CartContext.Provider
       value={{
