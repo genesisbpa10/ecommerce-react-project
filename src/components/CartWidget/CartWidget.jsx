@@ -8,7 +8,8 @@ const CartWidget = () => {
 
   return (
     <>
-      <BsCart className="mx-2 min_cart" /> <span> {cart.length} </span>
+      <BsCart className="mx-2 min_cart" />{" "}
+      {cart.length === 0 ? "" : <span> {cart.length} </span>}
     </>
   );
 };
