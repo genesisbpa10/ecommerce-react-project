@@ -1,5 +1,4 @@
 import React, { createContext, useState } from "react";
-
 export const CartContext = createContext();
 
 export default function CartProvider({ children }) {
@@ -8,6 +7,7 @@ export default function CartProvider({ children }) {
   //Agregar al carrito
   const addToCart = (item, quantity) => {
     const addItem = { ...item, quantity: quantity };
+
     //Verificar si un item está o no dentro del carrito, lógica de duplicados.
     const isInCart = cart.some((e) => e.id === item.id);
     const change = cart.findIndex((e) => e.id === item.id);
@@ -25,6 +25,10 @@ export default function CartProvider({ children }) {
   const clearCart = () => {
     setCart([]);
   };
+  //Sumar precios totales
+  const totalPrice = () => {
+    return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);
+  };
 
   return (
     <CartContext.Provider
@@ -33,6 +37,8 @@ export default function CartProvider({ children }) {
         addToCart,
         removeFromCart,
         clearCart,
+        totalPrice,
+        // totalIems
       }}
     >
       {children}

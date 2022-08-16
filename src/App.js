@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
@@ -9,8 +9,27 @@ import Contacto from "./views/Contacto.js";
 import Faqs from "./views/Faqs.js";
 import Cart from "./components/Cart/Cart";
 import CartProvider from "./context/CartContext";
+import { initializeApp } from "firebase/app";
+import { doc, getDoc,  getFirestore } from "firebase/firestore";
 
 function App() {
+//   const [value, setValue] = useState()
+// useEffect(() => {
+//   const db = getFirestore()
+//   const sheineMomeRef = doc(db, "items", "JGAVCqVns3qnrYcuqxOR")
+//   getDoc(sheineMomeRef)
+//   .then((snapshot) => {
+//       if(snapshot.exists()){
+//         const data ={
+//           id: snapshot.id,
+//           ...snapshot.data()      
+//           }
+//           console.log(data)
+//           setValue(data)
+//         }
+//   })
+//   .catch((error) => console.error(error))
+// }, [])
 
   return (
     <>
