@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import ItemCart from "../ItemCart";
-import { Card } from "reactstrap";
 
 const Cart = () => {
   const { cart, totalPrice } = useContext(CartContext);
@@ -33,12 +32,16 @@ const Cart = () => {
               <ItemCart key={item.id} item={item} />
             ))}
           </div>
-          <Card style={{ height: "20vh", widht: "100vh" }}>
+          <div>
             <h4>Total: ${totalPrice()}</h4>
             <button className="btn btn-outline-dark w-50 px-3">
               Finalizar Compra
             </button>
-          </Card>
+            
+            <Link to="/" className="btn btn-outline-dark px-3">
+            Volver a comprar
+          </Link>
+          </div>
         </>
       )}
     </div>

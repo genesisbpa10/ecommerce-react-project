@@ -20,7 +20,12 @@ const ItemCart = ({ item }) => {
         <CardText>Cantidad: {item.quantity}</CardText>
         <CardText>Subtotal: ${item.price * item.quantity}</CardText>
       </CardBody>
-      <button onClick={() => removeFromCart(item.id)}>Borrar</button>
+      <button
+        className="btn btn-outline-dark "
+        onClick={() => removeFromCart(item.id)}
+      >
+        Borrar
+      </button>
     </Card>
   );
 };

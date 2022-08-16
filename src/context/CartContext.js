@@ -38,10 +38,9 @@ export default function CartProvider({ children }) {
         removeFromCart,
         clearCart,
         totalPrice,
-        // totalIems
       }}
     >
       {children}
     </CartContext.Provider>
   );
-}
+};

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./ItemCount.css";
 import { Button } from "reactstrap";
+
 const ItemCount = ({ initial, onAdd, stock, onErase }) => {
   const [count, setCount] = useState(initial);
 
@@ -19,7 +20,9 @@ const ItemCount = ({ initial, onAdd, stock, onErase }) => {
 
   return (
     <>
-      <div className="m-auto">{count}</div>
+      <div className="m-auto"> 
+      {`Cantidad a agregar: ${count}`} 
+      </div>
       <div style={{ textAlign: "center", display: "block" }}>
         <Button
           className=" p-auto m-3"
