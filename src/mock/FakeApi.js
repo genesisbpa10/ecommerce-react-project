@@ -278,7 +278,7 @@ export const products = [
   {
     id: "1-6",
     sku: "",
-    name: "Mariposas ",
+    name: "Mariposas",
     price: "5000",
     description: "Cinta",
     width: "20cm",
