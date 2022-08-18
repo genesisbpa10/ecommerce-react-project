@@ -43,4 +43,4 @@ export default function CartProvider({ children }) {
       {children}
     </CartContext.Provider>
   );
-};
+}

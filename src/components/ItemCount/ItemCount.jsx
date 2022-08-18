@@ -20,9 +20,7 @@ const ItemCount = ({ initial, onAdd, stock, onErase }) => {
 
   return (
     <>
-      <div className="m-auto"> 
-      {`Cantidad a agregar: ${count}`} 
-      </div>
+      <div className="m-auto">{`Cantidad a agregar: ${count}`}</div>
       <div style={{ textAlign: "center", display: "block" }}>
         <Button
           className=" p-auto m-3"
@@ -39,9 +37,8 @@ const ItemCount = ({ initial, onAdd, stock, onErase }) => {
           -
         </Button>
       </div>
-      <div style={{ textAlign: "center" }}>       
-         <Button onClick={() => onAdd(count)}>Agregar </Button>
-        <Button onClick={() => onErase(count)}>Eliminar </Button>
+      <div style={{ textAlign: "center" }}>
+        <Button onClick={() => onAdd(count)}>Agregar </Button>
       </div>
     </>
   );

@@ -1,45 +1,55 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
-import { collection, getDocs,  getFirestore } from "firebase/firestore";
-
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  query,
+  where,
+} from "firebase/firestore";
 
 const ItemListContainer = () => {
-  
-  
-  const [items, setItems] = useState([])
+  const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { category } = useParams();
+
   useEffect(() => {
-    const db= getFirestore()
-    const itemsCollection = collection(db, "products")
-  
+    const db = getFirestore();
+    const itemsCollection = collection(db, "products");
+
     getDocs(itemsCollection)
-    .then((snapshot) => {
-      const data =snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()}))
-      setItems(data)
-      console.log(data);
-     
-    })
-    .catch((error) => console.log(error))
-    .finally(setLoading(false))
+      .then((snapshot) => {
+        const data = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setItems(data);
+      })
+      .catch((error) => console.log(error))
+      .finally(setLoading(false));
+  }, []);
 
-  }, [])
-  
-  // const [productList, setProductList] = useState([]);
-  // const {category} = useParams();
+  useEffect(() => {
+    if (category) {
+      const db = getFirestore();
+      const itemsCollectionQuery = query(
+        collection(db, "products"),
+        where("category", "==", category)
+      );
 
-  // useEffect(() => {
-  //   data 
-  //   .then((resp) => {
-  //     if(category){
-  //       setProductList(resp.filter((product) => product.category === category))
-  //     }else{
-  //       setProductList(resp)
-  //     }
-  //     })
-  //     .catch((error) => console.log(error))
-  //     .finally(setLoading(false))
-  // }, [category])
+      getDocs(itemsCollectionQuery)
+        .then((snapshot) => {
+          const data = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+          setItems(data);
+        })
+        .catch((error) => console.log(error))
+        .finally(setLoading(false));
+    }
+  }, [category]);
 
   return (
     <div
@@ -50,7 +60,6 @@ const ItemListContainer = () => {
         flexWrap: "wrap",
       }}
     >
-      
       {loading ? (
         <h1>Cargando...</h1>
       ) : (
@@ -63,6 +72,3 @@ const ItemListContainer = () => {
 };
 
 export default ItemListContainer;
-
-
-

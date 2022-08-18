@@ -1,35 +1,24 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CardGroup } from "react-bootstrap";
 import { Card, CardImg, CardBody, CardTitle, CardText } from "reactstrap";
 import ItemCount from "../ItemCount/ItemCount";
 import { CartContext } from "../../context/CartContext";
-import { doc, getDoc,  getFirestore } from "firebase/firestore";
 
-const ItemDetail = (props) => {
-
-
+const ItemDetail = ({ productDetail }) => {
   const { addToCart } = useContext(CartContext);
 
-  const item = props.productDetail;
   const navigate = useNavigate();
   const [count, setCount] = useState(1);
 
   const onAdd = (quantityToAdd) => {
-    addToCart(item, quantityToAdd);
+    addToCart(productDetail, quantityToAdd);
     console.log(`Acabas de agregar ${quantityToAdd} productos al carrito.`);
     setCount(quantityToAdd);
     console.log(count);
     navigate("/cart");
   };
 
-  useEffect(() => {
-    console.log(count);
-  }, [count]);
-
-  const onErase = () => {
-    console.log("Esto va a eliminar los productos del carrito");
-  };
   return (
     <CardGroup
       className="p-auto"
@@ -40,31 +29,32 @@ const ItemDetail = (props) => {
         height: "80vh",
         margin: "2vh",
       }}
-      key={item}
+      key={productDetail.id}
     >
       <Card style={{ border: "none" }}>
         <CardImg
           className="m-3 p-2"
           style={{ width: "100%", borderRadius: "15px" }}
-          src={item.principalImg}
-          alt={item.name}
+          src={productDetail.principalImg}
+          alt={productDetail.name}
         />
       </Card>
       <Card style={{ border: "none" }}>
         <CardBody style={{ width: "100%", height: "100%" }}>
           <CardTitle>
             {" "}
-            <h2> {item.name} </h2>{" "}
+            <h2> {productDetail.name} </h2>{" "}
           </CardTitle>
-          <CardText className="text-muted">{`${item.description}${item.width} x ${item.height}`}</CardText>
-          <CardText> {`Precio: ARS$ ${item.price}`} </CardText>
-          <CardText> {`Stock: ${item.stock}`} </CardText>
+          <CardText className="text-muted">
+            {productDetail.description}
+          </CardText>
+          <CardText> {`Precio: ARS$ ${productDetail.price}`} </CardText>
+          <CardText> {`Stock: ${productDetail.stock}`} </CardText>
           <ItemCount
             className="card text-center"
             initial={1}
             onAdd={onAdd}
-            onErase={onErase}
-            stock={item.stock}
+            stock={productDetail.stock}
           />
         </CardBody>
       </Card>

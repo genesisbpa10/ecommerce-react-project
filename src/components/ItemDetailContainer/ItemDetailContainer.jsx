@@ -1,11 +1,10 @@
 import ItemDetail from "../ItemDetail/ItemDetail";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getProduct } from "../../mock/FakeApi";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 export const ItemDetailContainer = () => {
-    const [productDetail, setProductDetail] = useState();
+    const [productDetail, setProductDetail] = useState({});
     const [loading, setLoading] = useState(true);
     const { id } = useParams();
     
@@ -17,35 +16,19 @@ export const ItemDetailContainer = () => {
         if (snapshot.exists()) {
           const data = {
             id: snapshot.id,
-            ...snapshot.data(),
-          };
-          console.log(data);
+            ...snapshot.data()
+          }
           setProductDetail(data);
+          console.log(data); 
         }
       })
-      .catch((error) => console.error(error));
-    setLoading(false);
+      .catch((error) => console.error(error))
+       .finally(setLoading(false))
   }, []);
-  {
-    /*
-const [productDetail, setProductDetail] = useState({});
-
-useEffect(() => {
-    getProduct(id)
-    .then((resp) => {
-        if (id) {
-            setProductDetail(resp);
-            //console.log(resp)
-        } else {
-            console.log("error");
-        }
-      })
-      .catch((e) => console.log(e));
-      setLoading(false);
-    }, [id]);
+  useEffect(() => {
     
-*/
-  }
+  }, [id])
+  
   return (
     <div
       className="itemList"
