@@ -2,7 +2,9 @@
 
 Es un E-commerce desarrolado para la marca Tzure Bags, como proyecto final para el curso de React.Js de Coder House- Comisión: #34680 Julio- Septiembre 2022
 <img src="https://imgur.com/a/vj7VNNa.gif" alt="GIF"/> 
-![](/https://imgur.com/a/vj7VNNa.gif)
+
+![](/public/img/body-imgs/body-gold.jpg "")
+
 ## Las tecnologías utilizadas en el desarrollo del proyecto son:
 * HTML5
 * CSS3
