@@ -4,8 +4,11 @@ import { CardGroup } from "react-bootstrap";
 import { Card, CardImg, CardBody, CardTitle, CardText } from "reactstrap";
 import ItemCount from "../ItemCount/ItemCount";
 import { CartContext } from "../../context/CartContext";
+import { doc, getDoc,  getFirestore } from "firebase/firestore";
 
 const ItemDetail = (props) => {
+
+
   const { addToCart } = useContext(CartContext);
 
   const item = props.productDetail;

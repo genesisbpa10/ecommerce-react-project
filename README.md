@@ -1,7 +1,7 @@
 # E-Commerce TZURE BAGS
 
 Es un E-commerce desarrolado para la marca Tzure Bags, como proyecto final para el curso de React.Js de Coder House- Comisión: #34680 Julio- Septiembre 2022
-<a href="https://imgur.com/a/vj7VNNa.gif"> Ver GIF </a>
+<img src="https://imgur.com/a/vj7VNNa.gif"> Ver GIF </a>
 ## Las tecnologías utilizadas en el desarrollo del proyecto son:
 * HTML5
 * CSS3
@@ -12,7 +12,7 @@ Es un E-commerce desarrolado para la marca Tzure Bags, como proyecto final para 
 * Node.js
 
 ## Sobre la marca
- <img  src="./public/img/favicon.ico" width="200vh"/>
+ <img  src="./public/img/favicon.ico" width="200vh" alt="GIF"/>
 
 Es un microemprendimiento de elaboración personalizada de riñoneras hechas a mano, cruelty free, creadas con material sustentable y amigable con el medio ambiente. 
 
