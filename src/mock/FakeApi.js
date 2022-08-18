@@ -26,7 +26,7 @@ export const products = [
     height: "15cm",
     principalImg: "/img/riñoneras/SH-croco-bordo.png",
     secondaryImg: "/img/riñoneras/SH-croco-bordo-secondary.png",
-    thirdImg: "/img/riñoneras/SH-croco-bordo-.png",
+    thirdImg: "/img/riñoneras/SH-croco-bordo.png",
     category: "riñoneras",
     stock: "10",
     thumbnail: "",
@@ -88,7 +88,7 @@ export const products = [
   {
     id: "0-6",
     sku: "",
-    name: "Sheine Croco White ",
+    name: "Sheine Croco White",
     price: "3000",
     description: "Riñonera Sheine",
     width: "25cm",
@@ -122,7 +122,7 @@ export const products = [
   {
     id: "0-8",
     sku: "",
-    name: "Sheine Silver ",
+    name: "Sheine Silver",
     price: "5000",
     description: "Riñonera Sheine",
     width: "25cm",
@@ -187,11 +187,13 @@ export const products = [
     subCategory: "sheine",
     type: "fija", //Fija o intercambiable.
   },
+
+  
   // Cintas
   {
     id: "1-1",
     sku: "",
-    name: "Black ",
+    name: "Black",
     price: "500",
     description: "Cinta para escoger ",
     width: "20cm",
@@ -208,7 +210,7 @@ export const products = [
   {
     id: "1-2",
     sku: "",
-    name: "Rainobw Pastel ",
+    name: "Rainbow Pastel",
     price: "500",
     description: "Cinta",
     width: "20cm",
@@ -225,7 +227,7 @@ export const products = [
   {
     id: "1-3",
     sku: "",
-    name: "Militar Long ",
+    name: "Militar Long",
     price: "200",
     description: "Cinta",
     width: "20cm",
