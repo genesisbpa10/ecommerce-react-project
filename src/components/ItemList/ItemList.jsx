@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "../Item/Item";
 
-const ItemList = ({productList}) => {
+const ItemList = ({ items }) => {
   return (
     <div
       style={{
@@ -11,7 +11,7 @@ const ItemList = ({productList}) => {
         flexWrap: "wrap",
       }}
     >
-      {productList.map((product) => (
+      {items.map((product) => (
         <Item key={product.id} product={product} />
       ))}
     </div>

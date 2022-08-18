@@ -13,7 +13,7 @@ const ItemDetail = (props) => {
 
   const item = props.productDetail;
   const navigate = useNavigate();
-  const [count, setCount] = useState(item.initial);
+  const [count, setCount] = useState(1);
 
   const onAdd = (quantityToAdd) => {
     addToCart(item, quantityToAdd);
@@ -40,7 +40,7 @@ const ItemDetail = (props) => {
         height: "80vh",
         margin: "2vh",
       }}
-      key={item.id}
+      key={item}
     >
       <Card style={{ border: "none" }}>
         <CardImg

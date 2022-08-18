@@ -346,7 +346,7 @@ export const products = [
   {
     id: "1-10",
     sku: "",
-    name: "Cow ",
+    name: "Cow",
     price: "5000",
     description: "Cinta",
     width: "20cm",
@@ -363,7 +363,7 @@ export const products = [
   {
     id: "1-11",
     sku: "",
-    name: "Chains ",
+    name: "Chains",
     price: "100",
     description: "Cinta",
     width: "20cm",
@@ -380,7 +380,7 @@ export const products = [
   {
     id: "1-12",
     sku: "",
-    name: " Burberry",
+    name: "Burberry",
     price: "200",
     description: "Cinta",
     width: "20cm",
@@ -397,7 +397,7 @@ export const products = [
   {
     id: "1-13",
     sku: "",
-    name: "Army ",
+    name: "Army",
     price: "5000",
     description: "Cinta",
     width: "20cm",

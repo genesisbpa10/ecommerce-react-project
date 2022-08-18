@@ -10,8 +10,6 @@ const Item = ({ product }) => {
     stock,
     price,
     description,
-    height,
-    width,
   } = product;
 
   return (
@@ -31,7 +29,7 @@ const Item = ({ product }) => {
             <h3> {name} </h3>
           </CardTitle>
           <CardText className="my-0 mx-1 text-muted">
-            {`${description} ${height} x ${width}`}{" "}
+            {description}{" "}
           </CardText>
           <CardText className="my-0 mx-1"> {`Precio: ARS$ ${price}`} </CardText>
           <CardText className="my-0 mx-1"> {`Stock: ${stock}`} </CardText>
