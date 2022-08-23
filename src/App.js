@@ -9,6 +9,7 @@ import Contacto from "./views/Contacto.js";
 import Faqs from "./views/Faqs.js";
 import Cart from "./components/Cart/Cart";
 import CartProvider from "./context/CartContext";
+import CheckOut from "./views/CheckOut";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/category/:category" element={<ItemListContainer />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<ItemListContainer />} />
+          <Route path="/checkout" element={<CheckOut />} />
         </Routes>
       </CartProvider>
     </>

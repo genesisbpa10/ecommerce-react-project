@@ -8,6 +8,7 @@ import {
   query,
   where,
 } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -15,9 +16,9 @@ const ItemListContainer = () => {
   const { category } = useParams();
 
   useEffect(() => {
-    const db = getFirestore();
+    
     const itemsCollection = collection(db, "products");
-
+ 
     getDocs(itemsCollection)
       .then((snapshot) => {
         const data = snapshot.docs.map((doc) => ({
