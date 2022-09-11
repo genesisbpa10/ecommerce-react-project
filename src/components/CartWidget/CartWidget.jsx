@@ -9,9 +9,6 @@ const CartWidget = () => {
 
   return (
     <>
-      {cart.length == 0 ? (
-        ""
-      ) : (
         <Link style={{ color: "black", textDecorationLine: "none" }} to="/cart">
           <BsCart className="mx-2 min_cart dark" />{" "}
           <span>
@@ -22,7 +19,6 @@ const CartWidget = () => {
                 .reduce((act, actualItem) => act + actualItem)}{" "}
           </span>
         </Link>
-      )}
     </>
   );
 };

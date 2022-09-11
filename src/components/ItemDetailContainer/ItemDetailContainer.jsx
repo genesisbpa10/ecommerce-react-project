@@ -1,34 +1,32 @@
 import ItemDetail from "../ItemDetail/ItemDetail";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { doc, getDoc} from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase/config";
 
 export const ItemDetailContainer = () => {
-    const [productDetail, setProductDetail] = useState({});
-    const [loading, setLoading] = useState(true);
-    const { id } = useParams();
-    
-    useEffect(() => {
+  const [productDetail, setProductDetail] = useState({});
+  const [loading, setLoading] = useState(true);
+  const { id } = useParams();
+
+  useEffect(() => {
     const docData = doc(db, "products", id);
     getDoc(docData)
       .then((snapshot) => {
         if (snapshot.exists()) {
           const data = {
             id: snapshot.id,
-            ...snapshot.data()
-          }
+            ...snapshot.data(),
+          };
           setProductDetail(data);
-          console.log(data); 
+          console.log(data);
         }
       })
       .catch((error) => console.error(error))
-       .finally(setLoading(false))
+      .finally(setLoading(false));
   }, []);
-  useEffect(() => {
-    
-  }, [id])
-  
+  useEffect(() => {}, [id]);
+
   return (
     <div
       className="itemList"

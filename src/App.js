@@ -14,20 +14,20 @@ import CheckOut from "./views/CheckOut";
 function App() {
   return (
     <>
-      <CartProvider>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/faqs" element={<Faqs />} />
-          <Route path="/contacto" element={<Contacto />} />
-          <Route path="/item/:id" element={<ItemDetailContainer />} />
-          <Route path="/category/:category" element={<ItemListContainer />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="*" element={<ItemListContainer />} />
-          <Route path="/checkout" element={<CheckOut />} />
-        </Routes>
-      </CartProvider>
+        <CartProvider>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/faqs" element={<Faqs />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/item/:id" element={<ItemDetailContainer />} />
+            <Route path="/category/:category" element={<ItemListContainer />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="*" element={<ItemListContainer />} />
+            <Route path="/checkout" element={<CheckOut />} />
+          </Routes>
+        </CartProvider>
     </>
   );
 }

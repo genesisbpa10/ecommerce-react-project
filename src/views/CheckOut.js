@@ -6,14 +6,17 @@ import { useNavigate } from "react-router";
 
 const CheckOut = () => {
   const [comprador, setComprador] = useState({});
-  const { orderId, setOrderId } = useState();
+  const [orderId, setOrderId] = useState("");
   const { cart, totalPrice, clearCart } = useContext(CartContext);
   const navigate = useNavigate()
 
   const datosComprador = (e) => {
     setComprador({
       ...comprador,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
+      [e.target.lastname]: e.target.value,
+      [e.target.telefono]: e.target.value,
+      [e.target.email]: e.target.value,
     });
   }
   const finalizarCompra = (e) => {
@@ -25,47 +28,55 @@ const CheckOut = () => {
       total: totalPrice(),
       date: serverTimestamp(),
     })
-    .then((resp) => {
-        setOrderId(resp.id)
-        clearCart()
-        console.log(resp.id)
-      })
-      .catch((e) => console.log(e))
-  };
+    .then ((response) => {
+      setOrderId(response.id)
+      if (response) {
+          clearCart()
+      }
+  })
+  .catch ((error)=> console.log(error))
+}
 
   return (
     <>
-      {!orderId ? (
+      {!orderId ? 
         <div>
           <h2>CheckOut</h2>
           <form onSubmit={finalizarCompra}>
             <input
               type="text"
-              placeholder="Nombre completo"
+              placeholder="Nombre "
               name="name"
               onChange={datosComprador}
-            />
+              />
+            <input
+              type="text"
+              placeholder="Apellido"
+              name="lastname"
+              onChange={datosComprador}
+              />
             <input
               type="number"
               placeholder="Número de teléfono"
               name="telefono"
               onChange={datosComprador}
-            />
+              />
             <input
               type="email"
               placeholder="tumail@gmail.com"
+              name="email"
               onChange={datosComprador}
-            />
-            <button type="submit">Finalizar comprar</button>
+              />
+            <button type="submit">Finalizar compra</button>
           </form>
         </div>
-      ) : (
+       : 
         <div>
           <h3>¡Gracias por su compra!</h3>
-          <h4>su orden es: {orderId} </h4>
+          <h4>Su orden es: {orderId} </h4>
           <button onClick={() => navigate("/")} >Volver</button>
         </div>
-      )}
+      }
     </>
   );
 };

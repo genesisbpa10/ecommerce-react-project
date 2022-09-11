@@ -28,6 +28,7 @@ const About = () => {
               que el negocio pueda llegar a más clientes y formar una gran
               comunidad que comparta sus valores.{" "}
             </p>
+            <h3></h3>
             <Link to="/contacto" className="btn btn-outline-dark px-3">
               Contáctame
             </Link>
