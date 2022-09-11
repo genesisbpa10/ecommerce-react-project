@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
-import {
-  collection,
-  getDocs,
-  getFirestore,
-  query,
-  where,
-} from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../firebase/config";
+import Loader from "../Loader/Loader";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -16,45 +11,25 @@ const ItemListContainer = () => {
   const { category } = useParams();
 
   useEffect(() => {
-    
-    const itemsCollection = collection(db, "products");
- 
+    const itemsCollection = category
+      ? query(collection(db, "products"), where("category", "==", category))
+      : collection(db, "products");
     getDocs(itemsCollection)
       .then((snapshot) => {
-        const data = snapshot.docs.map((doc) => ({
+        const list = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
-        setItems(data);
+        setItems(list);
+        setLoading(false);
       })
-      .catch((error) => console.log(error))
-      .finally(setLoading(false));
-  }, []);
-
-  useEffect(() => {
-    if (category) {
-      const db = getFirestore();
-      const itemsCollectionQuery = query(
-        collection(db, "products"),
-        where("category", "==", category)
-      );
-
-      getDocs(itemsCollectionQuery)
-        .then((snapshot) => {
-          const data = snapshot.docs.map((doc) => ({
-            id: doc.id,
-            ...doc.data(),
-          }));
-          setItems(data);
-        })
-        .catch((error) => console.log(error))
-        .finally(setLoading(false));
-    }
+      .catch((error) => console.log(error));
   }, [category]);
 
   return (
     <div
       style={{
+        padding: "8vh",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
@@ -62,7 +37,7 @@ const ItemListContainer = () => {
       }}
     >
       {loading ? (
-        <h1>Cargando...</h1>
+        <Loader />
       ) : (
         <>
           <ItemList items={items} />

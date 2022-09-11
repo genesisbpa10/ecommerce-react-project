@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase/config";
-
+import ItemNotFound from "../ItemNotFound/ItemNotFound";
 export const ItemDetailContainer = () => {
   const [productDetail, setProductDetail] = useState({});
   const [loading, setLoading] = useState(true);
@@ -19,13 +19,12 @@ export const ItemDetailContainer = () => {
             ...snapshot.data(),
           };
           setProductDetail(data);
-          console.log(data);
+          setLoading(false);
+          console.log(loading);
         }
       })
-      .catch((error) => console.error(error))
-      .finally(setLoading(false));
-  }, []);
-  useEffect(() => {}, [id]);
+      .catch((error) => console.error(error));
+  }, [id]);
 
   return (
     <div
@@ -37,11 +36,7 @@ export const ItemDetailContainer = () => {
         flexWrap: "wrap",
       }}
     >
-      {loading ? (
-        <p>Cargando...</p>
-      ) : (
-        <ItemDetail productDetail={productDetail} />
-      )}
+      {loading ? <ItemNotFound /> : <ItemDetail key={productDetail.id} productDetail={productDetail} />}
     </div>
   );
 };

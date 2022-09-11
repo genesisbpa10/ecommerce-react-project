@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ItemCount.css";
 import { Button } from "reactstrap";
-
-const ItemCount = ({ initial, onAdd, stock, onErase }) => {
-  const [count, setCount] = useState(initial);
+import { Badge } from "@mui/material";
+const ItemCount = ({ initial, onAdd, stock, count, setCount}) => {
 
   const add = () => {
     if (count < stock) {
-      setCount(count + 1);
-    } else {
-      alert("No hay más stock de este producto");
-    }
+      setCount(count + 1)
+      console.log(count);
+    } 
   };
   const substract = () => {
     if (count > initial) {
@@ -21,6 +19,10 @@ const ItemCount = ({ initial, onAdd, stock, onErase }) => {
   return (
     <>
       <div className="m-auto">{`Cantidad a agregar: ${count}`}</div>
+      <div >
+                {count === stock && <Badge pill bg="primary">Stock disponible del producto</Badge>}
+                {stock === 0 && <Badge pill bg="danger">Este producto se encuentra agotado</Badge>}
+            </div>
       <div style={{ textAlign: "center", display: "block" }}>
         <Button
           className=" p-auto m-3"
@@ -36,6 +38,8 @@ const ItemCount = ({ initial, onAdd, stock, onErase }) => {
         >
           -
         </Button>
+      </div>
+      <div>
       </div>
       <div style={{ textAlign: "center" }}>
         <Button onClick={() => onAdd(count)}>Agregar </Button>

@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { CardGroup } from "react-bootstrap";
 import { Card, CardImg, CardBody, CardTitle, CardText } from "reactstrap";
 import ItemCount from "../ItemCount/ItemCount";
-import ItemNotFound from "../ItemNotFound/ItemNotFound"
 import { CartContext } from "../../context/CartContext";
 
 const ItemDetail = ({ productDetail }) => {
@@ -22,24 +21,24 @@ const ItemDetail = ({ productDetail }) => {
 
   return (
     <>
-      {productDetail.id ? (
-        <CardGroup
-          className="p-auto"
+        <CardGroup 
+          key={productDetail.id}
+          className="m-auto p-auto"
           style={{
-            border: "silver solid 2px",
-            borderRadius: "20px",
-            width: "120vh",
-            height: "80vh",
+            width: "80wh",
+            height: "65vh",
             margin: "2vh",
           }}
-          key={productDetail.id}
+        
         >
-          <Card style={{ border: "none" }}>
+          <Card  key={productDetail.principalImg} >
             <CardImg
-              className="m-3 p-2"
-              style={{ width: "100%", borderRadius: "15px" }}
+            key={`${productDetail.id}${productDetail.principalImg}`}
+              className="m-auto p-0"
+              style={{ width: "60%", height:"80%" }}
               src={productDetail.principalImg}
               alt={productDetail.name}
+            
             />
           </Card>
           <Card style={{ border: "none" }}>
@@ -48,23 +47,24 @@ const ItemDetail = ({ productDetail }) => {
                 {" "}
                 <h2> {productDetail.name} </h2>{" "}
               </CardTitle>
-              <CardText className="text-muted">
+              <CardText key={productDetail.id} className="text-muted">
                 {productDetail.description}
               </CardText>
               <CardText> {`Precio: ARS$ ${productDetail.price}`} </CardText>
               <CardText> {`Stock: ${productDetail.stock}`} </CardText>
               <ItemCount
+            
                 className="card text-center"
                 initial={1}
                 onAdd={onAdd}
                 stock={productDetail.stock}
+                count={count}
+                setCount={setCount}
               />
             </CardBody>
           </Card>
         </CardGroup>
-      ) : (
-        <ItemNotFound />
-      )}
+      
     </>
   );
 };
