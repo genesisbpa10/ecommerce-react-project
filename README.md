@@ -14,7 +14,7 @@ Es un E-commerce desarrolado para la marca Tzure Bags, como proyecto final para 
 * Reactstrap
 * Node.js
 * Vercel
-
+* Firebase y Firestore
 ## Sobre la marca
  <img  src="./public/img/favicon.ico" width="200vh" />
 
