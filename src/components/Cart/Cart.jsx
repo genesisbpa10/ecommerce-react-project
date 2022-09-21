@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import ItemCart from "../ItemCart";
 import { Row, Col } from "reactstrap";
 import "../ItemCart.css";
+
 const Cart = ({ products }) => {
   const { cart, totalPrice, clearCart } = products;
   const navigate = useNavigate();

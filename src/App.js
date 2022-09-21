@@ -8,12 +8,14 @@ import About from "./views/About";
 import Contacto from "./views/Contacto.js";
 import Faqs from "./views/Faqs.js";
 import CartProvider from "./context/CartContext";
+import AuthProvider from "./context/AuthContext";
 import CheckOut from "./views/CheckOut";
 import CartContainer from "./components/CartContainer/CartContainer";
+import LogIn from "./auth/LogIn";
 
 function App() {
   return (
-    <>
+    <><AuthProvider>
       <CartProvider>
         <NavBar />
         <Routes>
@@ -26,8 +28,10 @@ function App() {
           <Route path="/cart" element={<CartContainer />} />
           <Route path="*" element={<ItemListContainer />} />
           <Route path="/checkout" element={<CheckOut />} />
+          <Route path="/login" element={<LogIn />} />
         </Routes>
       </CartProvider>
+    </AuthProvider>
     </>
   );
 }

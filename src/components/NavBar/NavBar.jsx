@@ -3,8 +3,11 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import CartWidget from "../CartWidget/CartWidget";
+import {RiLogoutBoxRLine} from "react-icons/ri";
+import {useNavigate} from "react-router-dom";
 
 function NavBar() {
+  const navigate = useNavigate();
   return (
     <>
       <Navbar
@@ -54,6 +57,7 @@ function NavBar() {
             </Nav>
           </Navbar.Collapse>
           <CartWidget as={Link} to="/" />
+          <RiLogoutBoxRLine onClick={() => navigate("/login")} />
         </Container>
       </Navbar>
     </>
